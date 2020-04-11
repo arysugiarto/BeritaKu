@@ -1,0 +1,2 @@
+rootProject.name='BeritaKu'
+include ':app'
