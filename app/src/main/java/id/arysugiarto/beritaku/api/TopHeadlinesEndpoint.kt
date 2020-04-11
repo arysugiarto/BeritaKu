@@ -1,6 +1,7 @@
 package id.arysugiarto.beritaku.api
 
 import id.arysugiarto.beritaku.model.TopHeadlines
+import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
 import java.util.*
@@ -10,7 +11,7 @@ interface TopHeadlinesEndpoint {
     fun getTopHeadLines(
         @Query("country") country : String,
         @Query("apiKey") apiKey: String
-    ): Observable<TopHeadlines>
+    ): Observable <TopHeadlines>
 
     @GET("top-headlines")
     fun getuserSearchInput(

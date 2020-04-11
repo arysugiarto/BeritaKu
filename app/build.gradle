@@ -21,7 +21,20 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+//        debug {
+//            applicationIdSuffix ".debug"
+//            debuggable true
+//        }
+//
+//        debug {
+//            buildConfigField "String", "apiKey", '"9d22ee2c317f440cb7c5fca60f7e7255"'
+//        buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
+//        buildConfigField "String", "IMG_URL", '"https://image.tmdb.org/t/p/"'
+//        }
     }
+
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -35,6 +48,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

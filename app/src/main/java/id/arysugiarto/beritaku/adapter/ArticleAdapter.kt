@@ -1,5 +1,6 @@
 package id.arysugiarto.beritaku.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,12 +18,11 @@ class ArticleAdapter (
 ): RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>(){
 
     private val placeHolderImage="https://pbs.twimg.com/profile_images/467502291415617536/SP8_ylk9.png"
-
+    private lateinit var viewGroupContext: Context
 
     override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ArticleViewHolder {
+        parent: ViewGroup, viewType: Int): ArticleViewHolder {
+        viewGroupContext = parent.context
         val itemView: View = LayoutInflater.from(parent.context).inflate(R.layout.item_article, parent,false)
         return ArticleViewHolder(itemView)
     }
@@ -31,8 +31,12 @@ class ArticleAdapter (
         return articleList.size
     }
 
-    override fun onBindViewHolder(holder: ArticleAdapter.ArticleViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val article: Article = articleList.get(position)
+        setPropertiesForArticleViewHolder(holder, article)
+        holder.cardView.setOnClickListener{
+
+        }
 
     }
 
