@@ -66,4 +66,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+//    Ripple effect
+    implementation 'com.balysv:material-ripple:1.0.2'
+
 }
